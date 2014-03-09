@@ -100,6 +100,7 @@ int heap_extract_max(int *a)
 	
 	int max = a[1];
 	a[1] = a[a[0]];
+	a[0] -= a[0];
 	max_heapify(a,1);
 	
 	return max;
